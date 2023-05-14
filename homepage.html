@@ -430,6 +430,7 @@
             --hover-primary-color: #129c49;
             --second-color: #3495d5;
             --page-background-color: #ffffff;
+        
             --primary-lite-color: #129c49;
         }
     </style>
@@ -650,7 +651,7 @@
     text-align: center;
 }
 .formasPagamento{
-    text-align: center;
+    width: 50%;
     }
     
     </style><!-- Global site tag (gtag.js) - Google Analytics -->
@@ -2065,31 +2066,7 @@
                                 </div>
                             </div>
                         </div>
-                      <button id="cartButtonTablet" type="button"
-                            class="navbar-toggle visible-md-block visible-sm-block visible-xs-block cart-button-mobile"
-                            data-toggle="collapse" data-target=".navbar-cart"><i
-                                class="fa fa-shopping-cart colorWhite"></i><span class="text">&nbsp; (0)</span><b
-                                class="caret colorWhite"></b></button><button id="cartButtonMobile" type="button"
-                            class="navbar-toggle cart-button-mobile"><a href="/cart/"><i
-                                    class="fa fa-shopping-cart colorWhite"></i><span class="text">&nbsp; (0)</span><b
-                                    class="caret colorWhite"></b></a></button>
-                        <div
-                            class="dropdown pull-right cartMenu loginMenu visible-md-block visible-sm-block visible-xs-block">
-                            <button type="button" class="navbar-toggle myaccount-button-mobile"
-                                data-toggle="dropdown"><i class="glyphicon glyphicon-user colorWhite"></i><b
-                                    class="caret colorWhite"></b></button>
-                            <ul class="dropdown-menu">
-                                <div class="myaccount__lazyload text-center" style="padding: 20px 5px">Carregando...
-                                </div>
-                                <li class="user-dropdown-sign-in user__anonymous" style="display: none"><a
-                                        href="/login"><i class="fa fa-sign-in"></i>&nbsp;<span>Fazer login</span></a>
-                                </li>
-                                <li class="user-dropdown-register user__anonymous" style="display: none"><a
-                                        href="/login?newCustomer=true"><i class="fa fa-user"></i>&nbsp;<span>É novo?
-                                            <u>Cadastre-se</u></span></a></li>
-                            </ul>
-                        </div>
-                      
+                                            
                     </div>
                     <div class="navbar-cart collapse"></div>
                 </div>
@@ -6462,36 +6439,7 @@
             </div>
         </div><!--/.footer-bottom-->
     </footer>
-    <script>
-        try {
-            var _paq = window._paq = window._paq || [];
-            var uoouAnalyticsDatalayer = dataLayer[0];
-
-
-            _paq.push(["trackPageView"]);
-            _paq.push(["enableLinkTracking"]);
-
-            function embedTrackingCode() {
-                var u = "https://analytics.uoou.com.br/";
-                _paq.push(['setUserId', uoouAnalyticsDatalayer.customerEmail]);
-                _paq.push(["setTrackerUrl", u + "track-events.php"]);
-                _paq.push(['setSiteId', 'm2rp6aNap2orpREnWoR3']);
-                var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0]; g.type = "text/javascript";
-                g.defer = true; g.async = true; g.src = u + "analytics.js"; s.parentNode.insertBefore(g, s);
-            }
-
-            if (window.addEventListener) {
-                window.addEventListener("load", embedTrackingCode, false);
-            } else if (window.attachEvent) {
-                window.attachEvent("onload", embedTrackingCode);
-            } else {
-                embedTrackingCode();
-            }
-        } catch (err) {
-            console.log('Uoou Analytics Transaction Event');
-            console.log(err);
-        }
-    </script><noscript><img src="//analytics.uoou.com.br/matomo.php?idsite=m2rp6aNap2orpREnWoR3&amp;rec=1"
+    <noscript><img src="//analytics.uoou.com.br/matomo.php?idsite=m2rp6aNap2orpREnWoR3&amp;rec=1"
             style="border:0;" alt="Uoou Analytics" /></noscript>
     <script>window.isWaitMeAlreadyClosed = false; window.waitMeCurrentSelector = ''; window.waitMeChangeStatus = false; window.wishlistName = 'Lista de Favoritos'; window.channel = 'needti_tudoemintelbras'; window.homepagePath = '/'; window.AA_CONFIG = { scrollOffset: 120 }; window.currentDivisionFactor = 100; window.currentCurrencySymbol = 'R$'; window.currentFractionDigits = 2; window.currentDecimalSeparator = ','; window.currentThousandSeparator = '.'; window.baseAssets = 'https://uoou-assets.ucdn.com.br/';</script>
     <link rel="stylesheet"
@@ -6518,92 +6466,8 @@
     <script type="text/javascript"
         src="/custom/assets/54c19c377ca28181968ad82988b65455dab2ad63fa2d8d40a4b321a9K3005202010549896/frontend.js"></script>
    
-    <script>
-        $('#newsletter').modal('show');
-        $('#newsletter').removeClass('hide');
-    </script>
-    <script>window.loginErrors = ['Percebemos que o E-mail ou CPF/CNPJ informado não está cadastrado. Dica: normalmente isso ocorre quando o E-mail ou CPF/CNPJ foi digitado incorretamente ou quando o cliente ainda não possui cadastro.', 'Verificamos que o E-mail ou CPF/CNPJ digitado é inválido, por favor, verifique e tente novamente.', 'A senha digitada está incorreta, por favor, tente novamente ou então vá em &quot;Esqueci minha senha&quot; para criar uma nova senha.', 'alert alert-danger', 'Verificamos que seu usuário/IP atingiu o limite de solicitações de login por período e, por isso, não é possível continuar. Tente novamente mais tarde.', 'As instruções de como recuperar sua senha foram enviadas com sucesso para o seu e-mail']</script>
-    <script>
-        if ($('body').hasClass('simplified-layout') === false && (Uoou.cookie.get('uoou_cart') || Uoou.cookie.get('uoou_auth'))) {
-            $.post('/cart/info', function (data) {
-                if (data) {
-                    if (data.cart_quantity !== undefined && data.cart_quantity > 0) {
-                        $('.cartMenu span').not('.cart__immutable').text(function (i, txt) { if (txt.match(/\d+/)) { return txt.replace(/\d+/, data.cart_quantity); } });
-                        $('.cart-button-mobile span.text').not('.cart__immutable').text(function (i, txt) { if (txt.match(/\d+/)) { return txt.replace(/\d+/, data.cart_quantity); } });
-                        $('.cart-quantity-number').text(data.cart_quantity);
-                    } else {
-                        $('.minicart__empty').removeAttr("style");
-                    }
-                    $('.minicart__lazyload').replaceWith(data.mini_cart_html);
-                    $('.myaccount__lazyload').replaceWith(data.customer_myaccount_html);
-                    if (data.customer_authenticated) {
-                        if (data.customer.first_name) { $('.user__name-placeholder').text(data.customer.first_name); }
-                        if (data.customer.first_name_truncate) { $('.user__name-placeholder-truncate').text(data.customer.first_name_truncate); }
-                        $('.user__authenticated').show();
-                        $('.user__anonymous').hide();
-                    } else {
-                        $('.user__anonymous').show();
-                        $('.user__authenticated').hide();
-                    }
-                }
-            });
-        } else {
-            $('.user__anonymous').show();
-            $('.user__authenticated').hide();
-            $('.minicart__empty').removeAttr("style");
-            $('.minicart__lazyload').replaceWith("");
-            $('.myaccount__lazyload').replaceWith("");
-        }
-    </script>
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-
-        function startTawkToChat() {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/5914665c4ac4446b24a6e7ab/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-
-       }
-
-        $(document).ready(function () {
-            setTimeout(function () {
-                startTawkToChat();
-            }, 4000);
-        });
-
-        Tawk_API.onLoad = function () {
-        };
-
-    </script><!-- ClearSale Mapper -->
-    <script>
-        (function (a, b, c, d, e, f, g) {
-            a['CsdmObject'] = e; a[e] = a[e] || function () {
-                (a[e].q = a[e].q || []).push(arguments)
-            }, a[e].l = 1 * new Date(); f = b.createElement(c),
-                g = b.getElementsByTagName(c)[0]; f.async = 1; f.src = d; g.parentNode.insertBefore(f, g)
-        })(window, document, 'script', '//device.clearsale.com.br/m/cs.js', 'csdm');
-        csdm('app', '7iusbqmic4wv1grfkso1');
-        csdm('mode', 'manual');
-    </script>
-    <script type="text/javascript">
-
-        csdm('send', 'home');
-    </script><!-- ClearSale Mapper --><!-- Google Ads Conversão - Inicio -->
-    <script>
-
-        if (typeof gtag === "function") {
-        }
-    </script><!-- Google Ads Conversão - Fim --><!-- Google Ads Conversão - Inicio -->
-    <script>
-
-        if (typeof gtag === "function") {
-
-            gtag('event', 'conversion', { 'send_to': 'AW-751332295/5QlQCJWnmowCEMfXoeYC' });
-        }
-    </script><!-- Google Ads Conversão - Fim -->
+    
+    
 </body>
 
 </html>
