@@ -131,7 +131,7 @@ ul{
 .fundo{
   width: 100vw;
   height: 100vh;
-  background-image: url("./imagens/capa-mv.png");
+  background-image: url("capa-mv.png");
   background-position: bottom;
   background-size: cover;
   display: flex;
