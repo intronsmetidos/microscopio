@@ -79,8 +79,117 @@
     --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
   
   }
-  
+ 
+/*-----------------------------------*\
+    #MENU
+  \*-----------------------------------*/
 
+  nav{
+    color: var(--lighter-color);
+    position: fixed;
+    bottom: 10%;
+    width: 456px;
+    background-color: var(--dark-color);
+    left: 50%;
+    margin-left: -228px;
+    padding: 0 2em;
+    border-radius: 40px;
+    box-shadow: rgba(166, 166, 175, 0.25) 0 50px 100px -20px, rgba(180, 180, 180, 0.3) 0 30px 60px -30px;
+    overflow: hidden;
+  }
+  
+  nav ul{
+    display: flex;
+    align-items: center;
+  }
+  
+  nav :where(li, a){
+    position: relative;
+  }
+  
+  nav ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 1em;
+    font-size: 1.5em;
+    line-height: 1.4;
+    width: 80px;
+    height: 80px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+  }
+  
+  nav ul li a:hover{
+    color: #d6d6d6;
+  }
+  
+  nav ul li a span{
+    font-size: 10px;
+  }
+  
+  /*animação do menu*/
+  nav li::before, nav li::after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    height: 100%;
+    width: 30px;
+  }
+  
+  nav li.active::before{
+    left: -20px;
+    border-radius: 0 0 30px 0;
+  }
+  
+  nav li.active::after{
+    right: -20px;
+    border-radius: 0 0 0 30px;
+  }
+  
+  nav li.active::before, nav li.active::after{
+    background-color: var(--dark-color);
+    top: 1px;
+  }
+  
+  nav li a::before, nav li a::after{
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    z-index: -1;
+    border-radius: 10px 10px 0 0;
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    -webkit-transition: transform .3s, border-radius .3s;
+    transition: transform .3s, border-radius .3s;
+  }
+  
+  nav li.active a::before, nav li.active a::after{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+  nav li.active a::before{
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 100%;
+    border-radius: 30px 30px 0 0;
+  }
+  
+  nav li.active a::after{
+    left: -10px;
+    bottom: 0;
+    width: 100px;
+    height: 40px;
+  }
+  
+  nav li.active a{
+    color: var(--lighter-color);
+  }
+  
+  
   
 *{
   margin: 0;
@@ -96,7 +205,7 @@
     padding: 15px;
     border: 2px solid #004AAD;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 18px;
   font-weight: 800;
   font-family: Poppins;
 }
@@ -205,11 +314,55 @@ ul{
   ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
   
   
-  #ajustar{
+  .ajustar{
     text-align: justify;
+    margin: 0 auto; /* Centraliza o parágrafo horizontalmente */
+        max-width: 1000px; /* Define a largura máxima do parágrafo */
+        padding: 0;
+    
 
   }
-  
+
+    .ajustar2 {
+        text-align: justify; /* Justifica o texto */
+        margin: 0 auto; /* Centraliza o parágrafo horizontalmente */
+        max-width: 1000px; /* Define a largura máxima do parágrafo */
+
+        
+       
+    }
+
+    #center-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; /* Centraliza o parágrafo horizontalmente */
+   }
+
+    ul {
+        margin-top: 10px; /* Adiciona um espaçamento entre as listas */
+        margin-bottom: 10px; /* Adiciona um espaçamento entre as listas */
+        list-style-type: disc; /* Utiliza marcadores em forma de disco para as listas */
+        padding-left: 20px; /* Adiciona um recuo à esquerda para as listas */
+        padding-right: 20px;
+        text-align: justify;
+        margin: 0 auto; /* Centraliza o parágrafo horizontalmente */
+        max-width: 1000px; /* Define a largura máxima do parágrafo */
+        
+    }
+
+    li {
+        margin-top: 5px; /* Adiciona um espaçamento entre os itens da lista */
+        text-align: justify;
+        max-width: 1000px; /* Define a largura máxima do parágrafo */
+    }
+
+    h3 {
+        margin-top: 20px; /* Adiciona um espaçamento acima do título */
+        text-align: center; /* Centraliza o título */
+    }
+
+
 
   /*-----------------------------------*\
     #REUSED STYLE
@@ -355,9 +508,7 @@ ul{
   .service-card:hover .card-text { color: var(--dim-gray); }
   
   
-  .card-text{
-    text-align:justify;
-  }
+  
   
   
   /*-----------------------------------*\
@@ -519,7 +670,8 @@ ul{
   
   .footer-bottom {
     padding-block: 35px;
-    text-align: center;
+    text-align: left;
+    margin-left: 100px;
     border-block-start: 1px solid var(--cultured_20);
   }
   
