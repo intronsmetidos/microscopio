@@ -355,7 +355,9 @@ ul{
   .service-card:hover .card-text { color: var(--dim-gray); }
   
   
-  
+  .card-text{
+    text-align:justify;
+  }
   
   
   /*-----------------------------------*\
