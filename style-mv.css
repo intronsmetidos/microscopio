@@ -241,10 +241,10 @@ nav li.active a {
 .white-button {
   background-color: white;
   color: #024296;
-  padding: 5px;
+  padding: 6px;
   border: 2px solid #024296;
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 800;
   font-family: Poppins;
 }
