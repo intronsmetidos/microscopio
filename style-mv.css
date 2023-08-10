@@ -239,7 +239,19 @@ nav li.active a {
 ::after {
   box-sizing: border-box;
 }
-
+.imgefeito {
+    margin: 0;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+.imgefeito a {
+    text-decoration: none;
+    float: left;
+}
+.imgefeito a:hover {
+    cursor: pointer;
+} 
 .white-button {
   background-color: white;
   color: #024296;
