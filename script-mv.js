@@ -1,10 +1,16 @@
-const trigger = document.querySelectorAll('nav li');
-   trigger.forEach((menu) => menu.addEventListener('click', toggle));
 
-   function toggle(){
-     trigger.forEach((item) => item != this ? item.classList.remove('active') : null);
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-     if(this.classList != 'active'){
-       this.classList.toggle('active');
-     }
-}
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active2");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  
